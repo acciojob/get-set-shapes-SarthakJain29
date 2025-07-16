@@ -1,14 +1,14 @@
 //complete this code
 class Rectangle {
 	constructor(width, height){
-		this.width = width;
-		this.height = height;
+		this._width = width;
+		this._height = height;
 	}
 	get width(){
-		return this.width;
+		return this._width;
 	}
 	get height(){
-		return this.height;
+		return this._height;
 	}
 	set width(value) {
 		this._width = value;
@@ -18,17 +18,17 @@ class Rectangle {
 		this._height = value;}
 	
 	getArea(){
-		return this.height * this.width;
+		return this._height * this._width;
 	}
 }
 
 class Square extends Rectangle {
 	constructor(side){
 		super(side,side);
-		this.side = side;
+		this._side = side;
 	}
 	getPerimeter(){
-		return 4*this.side;
+		return 4*this._side;
 	}
 }
 
